@@ -35,8 +35,28 @@ while True:
 
     clock.tick(60)  # set the frame rate 60 per second
 
+    # catch Event
+    # action_list = pygame.event.get()
+    # if len(action_list):  # only print when action
+    #     print(action_list)
+
+    # listen Event
+    for event in pygame.event.get():
+
+        # if the event is quit
+        if event.type == pygame.QUIT:
+            print("Exit The Game....")
+
+            # quit unload all pygame module
+            pygame.quit()
+
+            #exit
+            exit()
+
+
     # 2. Change dragon position
     dragon_rect.y -= 1
+
 
     # 3. use blit to draw
     screen.blit(bg, (0, 0))
