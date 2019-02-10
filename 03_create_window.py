@@ -1,4 +1,5 @@
 import pygame
+from dragon_sprite import *
 
 pygame.init()
 
@@ -29,8 +30,15 @@ clock = pygame.time.Clock()
 # 1. Define Rect for dragon init position
 dragon_rect = pygame.Rect(150, 500, 50, 43)
 
+
+# create enemy sprite
+enemy = GameSprite("./image/enemy1.png")
+enemy1 = GameSprite("./image/enemy1.png", 2)
+# create enemy sprite group
+enemy_group = pygame.sprite.Group(enemy, enemy1)
+
+
 # Game Loop
-i = 0
 while True:
 
     clock.tick(60)  # set the frame rate 60 per second
@@ -61,6 +69,14 @@ while True:
     # 3. use blit to draw
     screen.blit(bg, (0, 0))
     screen.blit(dragon, dragon_rect)
+
+
+    # Sprint Group call update and then draw
+    # update - update all enemy position
+    enemy_group.update()
+    #draw
+    enemy_group.draw(screen)
+
 
     # 4. update frame
     pygame.display.update()
