@@ -1,8 +1,8 @@
 import pygame
 from dragon_sprite import *
 
-# screen size
-SCREEN_RECT = pygame.Rect(0, 0, 480, 700)
+# # screen size
+# SCREEN_RECT = pygame.Rect(0, 0, 480, 700)
 # frame rate
 FRAME_PER_SEC = 60
 
