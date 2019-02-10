@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3dad56d9-7600-4134-b45a-4d1dc0e66ca2" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/aircraft_main.py" afterPath="$PROJECT_DIR$/aircraft_main.py" />
       <change beforePath="$PROJECT_DIR$/dragon_sprite.py" afterPath="$PROJECT_DIR$/dragon_sprite.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,9 +17,11 @@
       <file leaf-file-name="aircraft_main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aircraft_main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="13" lean-forward="true" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="465">
+              <caret line="93" column="47" lean-forward="false" selection-start-line="93" selection-start-column="47" selection-end-line="93" selection-end-column="47" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -26,11 +29,12 @@
       <file leaf-file-name="dragon_sprite.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dragon_sprite.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="74" column="74" lean-forward="false" selection-start-line="74" selection-start-column="74" selection-end-line="74" selection-end-column="74" />
+            <state relative-caret-position="267">
+              <caret line="116" column="26" lean-forward="false" selection-start-line="116" selection-start-column="26" selection-end-line="116" selection-end-column="26" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
-                <element signature="e#632#1057#0" expanded="false" />
+                <element signature="e#684#1109#0" expanded="false" />
+                <element signature="e#1141#2072#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -297,19 +301,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/aircraft_main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="13" lean-forward="true" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="465">
+          <caret line="93" column="47" lean-forward="false" selection-start-line="93" selection-start-column="47" selection-end-line="93" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dragon_sprite.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="74" column="74" lean-forward="false" selection-start-line="74" selection-start-column="74" selection-end-line="74" selection-end-column="74" />
+        <state relative-caret-position="267">
+          <caret line="116" column="26" lean-forward="false" selection-start-line="116" selection-start-column="26" selection-end-line="116" selection-end-column="26" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
-            <element signature="e#632#1057#0" expanded="false" />
+            <element signature="e#684#1109#0" expanded="false" />
+            <element signature="e#1141#2072#0" expanded="false" />
           </folding>
         </state>
       </provider>

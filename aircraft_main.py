@@ -16,6 +16,7 @@ class AirCraftGame(object):
         self.__create_sprites()
         # 4. Set timer for Event Create enemy
         pygame.time.set_timer(CREATE_ENEMY_EVENT, 1000)
+        pygame.time.set_timer(HERO_FIRE_EVENT, 500)
 
 
     def __create_sprites(self):
@@ -28,6 +29,10 @@ class AirCraftGame(object):
 
         # create enemy sprite and group
         self.enemy_group = pygame.sprite.Group()
+
+        # create hero sprite and group
+        self.hero = Hero()
+        self.hero_group = pygame.sprite.Group(self.hero)
 
     def start_game(self):
         print("Game Start")
@@ -57,6 +62,19 @@ class AirCraftGame(object):
                 enemy = Enemy()
                 # add enemy sprite into group.
                 self.enemy_group.add(enemy)
+            # elif event.type == pygame.KEYDOWN and event.key == pygame.K_RIGHT:
+            #     print("move right")
+            elif event.type == HERO_FIRE_EVENT:
+                self.hero.fire()
+
+        keys_pressed = pygame.key.get_pressed()
+        if keys_pressed[pygame.K_RIGHT]:
+            # print("move right")
+            self.hero.speed = 2
+        elif keys_pressed[pygame.K_LEFT]:
+            self.hero.speed = -2
+        else:
+            self.hero.speed = 0
 
     def __check_collide(self):
         pass
@@ -68,6 +86,12 @@ class AirCraftGame(object):
 
         self.enemy_group.update()
         self.enemy_group.draw(self.screen)
+
+        self.hero_group.update()
+        self.hero_group.draw(self.screen)
+
+        self.hero.bullet_group.update()
+        self.hero.bullet_group.draw(self.screen)
 
     @staticmethod
     def __game_over():

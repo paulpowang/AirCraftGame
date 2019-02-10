@@ -7,6 +7,8 @@ SCREEN_RECT = pygame.Rect(0, 0, 437, 700)
 FRAME_PER_SEC = 60
 # Timer for creating enemy
 CREATE_ENEMY_EVENT = pygame.USEREVENT
+# Hero shoot
+HERO_FIRE_EVENT = pygame.USEREVENT + 1
 
 class GameSprite(pygame.sprite.Sprite):
     '''Aircraft Game Sprite'''
@@ -71,9 +73,64 @@ class Enemy(GameSprite):
 
         # 2. check if fly out of screen, then del the enemy
         if self.rect.y >= SCREEN_RECT.height:
-            print("fly out of screen and delete....")
+            # print("fly out of screen and delete....")
             # kill() can remove sprite from group and destroy from memory.
             self.kill()
 
     def __del__(self):
-        print("enemy destroy...")
+        # print("enemy destroy...")
+        pass
+
+
+class Hero(GameSprite):
+    '''Hero sprite'''
+
+
+    def __init__(self):
+        # 1. call parent init
+        super().__init__("./image/dragon.png", 0)
+
+        # 2. Hero initial position
+        self.rect.centerx = SCREEN_RECT.centerx
+        self.rect.bottom = SCREEN_RECT.bottom - 120
+
+        # 3. create bullet sprite group
+        self.bullet_group = pygame.sprite.Group()
+
+    def update(self):
+
+        # hero only move on x direction
+        self.rect.x += self.speed
+
+        # let hero cannot move out of screen
+        if self.rect.x < 0:
+            self.rect.x = 0
+        elif self.rect.right > SCREEN_RECT.right:
+            self.rect.right = SCREEN_RECT.right
+
+    def fire(self):
+        print("shoot...")
+
+        # 1. create bullet sprite
+        bullet = Bullet()
+        # 2. bullet position
+        bullet.rect.bottom = self.rect.y - 20
+        bullet.rect.centerx = self.rect.centerx
+        # 3. add bullet into group
+        self.bullet_group.add(bullet)
+
+class Bullet(GameSprite):
+    '''Bullet Sprite'''
+
+    def __init__(self):
+        super().__init__("./image/bullet1.png", -2)
+
+    def update(self):
+
+        super().update()
+        # if bullet out of screen
+        if self.rect.bottom < 0:
+            self.kill()
+
+    def __del__(self):
+        print("destroy bullet...")
