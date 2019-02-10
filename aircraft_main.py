@@ -20,7 +20,13 @@ class AirCraftGame(object):
         self.__create_sprites()
 
     def __create_sprites(self):
-        pass
+
+        # create background sprite and group
+        bg1 = Background("./image/background.png")
+        bg2 = Background("./image/background.png")
+        bg2.rect.y = -bg2.rect.height
+
+        self.back_group = pygame.sprite.Group(bg1, bg2)
 
     def start_game(self):
         print("Game Start")
@@ -50,7 +56,9 @@ class AirCraftGame(object):
         pass
 
     def __update_sprites(self):
-        pass
+
+        self.back_group.update()
+        self.back_group.draw(self.screen)
 
     @staticmethod
     def __game_over():

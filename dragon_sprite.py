@@ -1,7 +1,7 @@
 import pygame
 
 # screen size
-SCREEN_RECT = pygame.Rect(0, 0, 480, 700)
+SCREEN_RECT = pygame.Rect(0, 0, 437, 700)
 
 class GameSprite(pygame.sprite.Sprite):
     '''Aircraft Game Sprite'''
