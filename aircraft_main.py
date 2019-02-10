@@ -1,10 +1,6 @@
 import pygame
 from dragon_sprite import *
 
-# # screen size
-# SCREEN_RECT = pygame.Rect(0, 0, 480, 700)
-# frame rate
-FRAME_PER_SEC = 60
 
 class AirCraftGame(object):
     '''Main game class'''
@@ -18,15 +14,20 @@ class AirCraftGame(object):
         self.clock = pygame.time.Clock()
         # 3. create sprit and sprite group
         self.__create_sprites()
+        # 4. Set timer for Event Create enemy
+        pygame.time.set_timer(CREATE_ENEMY_EVENT, 1000)
+
 
     def __create_sprites(self):
 
         # create background sprite and group
-        bg1 = Background("./image/background.png")
-        bg2 = Background("./image/background.png")
-        bg2.rect.y = -bg2.rect.height
+        bg1 = Background()
+        bg2 = Background(True)
 
         self.back_group = pygame.sprite.Group(bg1, bg2)
+
+        # create enemy sprite and group
+        self.enemy_group = pygame.sprite.Group()
 
     def start_game(self):
         print("Game Start")
@@ -43,7 +44,6 @@ class AirCraftGame(object):
             # 5. update screen
             pygame.display.update()
 
-
     def __event_handler(self):
 
         for event in pygame.event.get():
@@ -51,6 +51,12 @@ class AirCraftGame(object):
             # see if exit the game
             if event.type == pygame.QUIT:
                 AirCraftGame.__game_over()
+            elif event.type == CREATE_ENEMY_EVENT:
+                print("Enemy showup....")
+                # create enemy sprite
+                enemy = Enemy()
+                # add enemy sprite into group.
+                self.enemy_group.add(enemy)
 
     def __check_collide(self):
         pass
@@ -59,6 +65,9 @@ class AirCraftGame(object):
 
         self.back_group.update()
         self.back_group.draw(self.screen)
+
+        self.enemy_group.update()
+        self.enemy_group.draw(self.screen)
 
     @staticmethod
     def __game_over():
