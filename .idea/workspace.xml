@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3dad56d9-7600-4134-b45a-4d1dc0e66ca2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/aircraft_main.py" afterPath="$PROJECT_DIR$/aircraft_main.py" />
       <change beforePath="$PROJECT_DIR$/dragon_sprite.py" afterPath="$PROJECT_DIR$/dragon_sprite.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,8 +26,8 @@
       <file leaf-file-name="dragon_sprite.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dragon_sprite.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="63" column="51" lean-forward="false" selection-start-line="63" selection-start-column="51" selection-end-line="63" selection-end-column="51" />
+            <state relative-caret-position="366">
+              <caret line="74" column="74" lean-forward="false" selection-start-line="74" selection-start-column="74" selection-end-line="74" selection-end-column="74" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
                 <element signature="e#632#1057#0" expanded="false" />
@@ -306,8 +305,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dragon_sprite.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="63" column="51" lean-forward="false" selection-start-line="63" selection-start-column="51" selection-end-line="63" selection-end-column="51" />
+        <state relative-caret-position="366">
+          <caret line="74" column="74" lean-forward="false" selection-start-line="74" selection-start-column="74" selection-end-line="74" selection-end-column="74" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
             <element signature="e#632#1057#0" expanded="false" />

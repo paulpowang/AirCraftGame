@@ -72,3 +72,8 @@ class Enemy(GameSprite):
         # 2. check if fly out of screen, then del the enemy
         if self.rect.y >= SCREEN_RECT.height:
             print("fly out of screen and delete....")
+            # kill() can remove sprite from group and destroy from memory.
+            self.kill()
+
+    def __del__(self):
+        print("enemy destroy...")
