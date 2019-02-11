@@ -111,13 +111,16 @@ class Hero(GameSprite):
     def fire(self):
         print("shoot...")
 
-        # 1. create bullet sprite
-        bullet = Bullet()
-        # 2. bullet position
-        bullet.rect.bottom = self.rect.y - 20
-        bullet.rect.centerx = self.rect.centerx
-        # 3. add bullet into group
-        self.bullet_group.add(bullet)
+        for i in (0, 1, 2):
+
+
+            # 1. create bullet sprite
+            bullet = Bullet()
+            # 2. bullet position
+            bullet.rect.bottom = self.rect.y - i * 20
+            bullet.rect.centerx = self.rect.centerx
+            # 3. add bullet into group
+            self.bullet_group.add(bullet)
 
 class Bullet(GameSprite):
     '''Bullet Sprite'''

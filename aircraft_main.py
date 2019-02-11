@@ -77,7 +77,9 @@ class AirCraftGame(object):
             self.hero.speed = 0
 
     def __check_collide(self):
-        pass
+
+        # 1. bullet destory enemy
+        pygame.sprite.groupcollide(self.hero.bullet_group, self.enemy_group, True, True)
 
     def __update_sprites(self):
 
