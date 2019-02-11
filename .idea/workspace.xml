@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3dad56d9-7600-4134-b45a-4d1dc0e66ca2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/aircraft_main.py" afterPath="$PROJECT_DIR$/aircraft_main.py" />
-      <change beforePath="$PROJECT_DIR$/dragon_sprite.py" afterPath="$PROJECT_DIR$/dragon_sprite.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,8 +16,8 @@
       <file leaf-file-name="aircraft_main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/aircraft_main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="81" column="88" lean-forward="true" selection-start-line="81" selection-start-column="88" selection-end-line="81" selection-end-column="88" />
+            <state relative-caret-position="267">
+              <caret line="87" column="28" lean-forward="true" selection-start-line="87" selection-start-column="28" selection-end-line="87" selection-end-column="28" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -313,8 +312,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/aircraft_main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="81" column="88" lean-forward="true" selection-start-line="81" selection-start-column="88" selection-end-line="81" selection-end-column="88" />
+        <state relative-caret-position="267">
+          <caret line="87" column="28" lean-forward="true" selection-start-line="87" selection-start-column="28" selection-end-line="87" selection-end-column="28" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>

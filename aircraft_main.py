@@ -81,6 +81,17 @@ class AirCraftGame(object):
         # 1. bullet destory enemy
         pygame.sprite.groupcollide(self.hero.bullet_group, self.enemy_group, True, True)
 
+        # 2. enemy collide to hero
+        enemies = pygame.sprite.spritecollide(self.hero, self.enemy_group, True)
+
+        # check if ememies is empty
+        if len(enemies) > 0:
+
+            # hero destroy
+            self.hero.kill()
+            # game over
+            AirCraftGame.__game_over()
+
     def __update_sprites(self):
 
         self.back_group.update()
